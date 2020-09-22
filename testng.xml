@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="D:/DemoBlaze/src/test/java/testcases/FlightBookingTest.java">
+    <classes>
+        <class name="testcases.FlightBookingTest">
+            <methods>
+                <include name="SC1_VerifyUserIsableToBookTicketSucessfully"/>
+                <include name="SC2_VerifyUserIsNotableToBookTicketSucessfullyWithoutFillingForm"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>
+
+
