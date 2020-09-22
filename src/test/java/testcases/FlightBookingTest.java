@@ -67,6 +67,28 @@ public class FlightBookingTest extends TestBase {
 		blazeDemoBookingPage.sucessIDGeneratedAfterBooking();
 		blazeDemoBookingPage.verifFeildAttributesAfterBooking("Status","PendingCapture");
 
+
+
+//		OTher testcases That Can Be Written
+//
+//		1.verify the different combination of Booking To and Fro Secnario
+//		2.Verify the differnt Flight Number For a Pariticular to and From Destiantion
+//		3.Verify the Airlines available for to and fro destiantin
+//		4.Verify the text messsag are proper in every screen
+//		5.Verify the Flight Details in the Third Screen
+//		6.Verify the Valid and Invalid CARD Details Scenario
+//		7.VErify the Expired Card Scenario
+//		8.VErify the functionality of remember me checkbox
+//		9.Verify all the details of Confimation page
+//		10.Verify the Api reponse from booking
+//		11.Verify the different Screen URLs like (https://blazedemo.com/purchase.php and  https://blazedemo.com/confirmation.php ) shouodl not be launched directly
+//		12.Verify the Destination of the week Functionality
+//		Note - There Can be Many More Test Cases
+
+
+
+
+
 	}
 	
 	

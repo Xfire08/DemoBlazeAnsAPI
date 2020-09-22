@@ -2,8 +2,12 @@ package com.maersk.blaze.pages;
 
 import com.maersk.blaze.base.TestBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class BlazeDemoBookingPage extends TestBase {
@@ -30,20 +34,31 @@ public class BlazeDemoBookingPage extends TestBase {
 	}
 
 	public void chooseFirstFlight(){
+		WebElement element = (new WebDriverWait(driver, 45))
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//tr[1]/td[1]")));
 		driver.findElement(By.xpath("//tr[1]/td[1]")).click();
 
 	}
 	public void fillTheFlightDetailsForm(String labelName,String value){
+		WebElement element = (new WebDriverWait(driver, 45))
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Purchase Flight']")));
+
 		driver.findElement(By.xpath("//label[contains(text(),'"+labelName+"')]/../div/input")).clear();
 		driver.findElement(By.xpath("//label[contains(text(),'"+labelName+"')]/../div/input")).sendKeys(value);
 
 	}
 	public void clickOnPurchaseFlight(){
+
 		driver.findElement(By.xpath("//input[@value='Purchase Flight']")).click();
 
 	}
 
 	public void verifyTextAfterBooking(String Message){
+
+		WebElement element = (new WebDriverWait(driver, 45))
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='container hero-unit']/h1")));
+
+
 		String actualMessage = driver.findElement(By.xpath("//div[@class='container hero-unit']/h1")).getText();
 		Assert.assertEquals(actualMessage,Message);
 
